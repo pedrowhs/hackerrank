@@ -1,2 +1,2 @@
 # hackerrank
-Códigos feitos para os exercícios da plataforma hackerrank
+Códigos feitos para os exercícios na plataforma hackerrank (https://www.hackerrank.com/domains/java)
