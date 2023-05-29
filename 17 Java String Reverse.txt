@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        String A = sc.next();
+        sc.close();
+        /*
+         * O StringBuilder e uma classe da biblioteca padrao do Java que e usada para manipular 
+         * sequencias de caracteres de forma eficiente. 
+         * Ele fornece uma maneira mais eficiente de construir, modificar e manipular 
+         * strings em comparacao com a classe String, que e imutavel.
+        */
+        StringBuilder stringReversa = new StringBuilder(A).reverse();
+        
+        // Converte o StringBuilder de volta para uma string
+        String resultado = stringReversa.toString();
+        
+        // Compara se a string original e igual a string reversa
+        if(A.compareTo(resultado) == 0){
+            System.out.println("Yes");
+            
+        }else{
+            System.out.println("No");
+        }
+                
+    }   
+}
