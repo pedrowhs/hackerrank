@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Solution {
+
+          static boolean isAnagram(String a, String b) {
+        // Converter as palavras em letras minusculas
+           a = a.toLowerCase();
+           b = b.toLowerCase();
+           
+            // Converter as palavras em arrays de caracteres
+            char[] arrayA = a.toCharArray();
+            char[] arrayB = b.toCharArray();
+
+            // Ordenar os arrays de caracteres
+            // foi usado java.util.Arrays pois no codigo atual nao e possivel importar o Arrays
+            java.util.Arrays.sort(arrayA);
+            java.util.Arrays.sort(arrayB);
+
+            // Comparar os arrays de caracteres resultantes
+            boolean resultado = java.util.Arrays.equals(arrayA, arrayB);
+            
+            return resultado;
+          
+        }
+
+  public static void main(String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+    }
+}
