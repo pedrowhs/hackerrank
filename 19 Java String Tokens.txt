@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+              
+        scan.close();
+//      - s.trim() e utilizado para remover os espacos em branco no inicio e no final da string s.
+        s = s.trim();
+        
+   
+//      - \\s corresponde a qualquer caractere de espaco em branco, incluindo espacos, guias e quebras de linha.
+//      - !?,._'@ corresponde a qualquer um dos caracteres especificados: ponto de exclamacao, virgula, ponto de interrogacao, ponto, underline, apostrofo e arroba.
+//      - O simbolo + significa "um ou mais" e garante que a string seja dividida em qualquer ponto onde houver um ou mais desses caracteres.
+        
+        if(!s.isEmpty()) {
+            String[] palavras = s.split("[\\s!?,._'@]+");
+            System.out.println(palavras.length);
+            for(String palavra : palavras) {
+                System.out.println(palavra);
+        }
+        }else {
+            System.out.println("0");
+        }
+
+    }
+}
